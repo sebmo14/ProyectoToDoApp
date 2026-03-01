@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { TareaService } from "../services/TareaService";
+import type { Request, Response } from "express";
+import { TareaService } from "../services/TareaService.js";
 
 const svc = new TareaService();
 

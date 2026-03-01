@@ -1,5 +1,5 @@
-import Tarea from "../models/Tarea";
-import Categoria from "../models/Categoria";
+import Tarea from "../models/Tarea.js";
+import Categoria from "../models/Categoria.js";
 
 export class TareaService {
   async getAllTareas() {

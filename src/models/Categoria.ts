@@ -1,6 +1,6 @@
 import { Model, DataTypes } from "sequelize";
-import sequelize from "../config/database";
-import Tarea from "./Tarea";
+import sequelize from "../config/database.js";
+import Tarea from "./Tarea.js";
 
 class Categoria extends Model {
     public id!: number;

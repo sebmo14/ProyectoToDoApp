@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { CategoriaService } from "../services/CategoriaService";
+import type { Request, Response } from "express";
+import { CategoriaService } from "../services/CategoriaService.js";
 
 const svc = new CategoriaService();
 

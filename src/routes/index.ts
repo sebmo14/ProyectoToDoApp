@@ -5,12 +5,12 @@ import {
     createTarea,
     updateTarea,
     deleteTarea,
-} from "../controllers/TareaController";
+} from "../controllers/TareaController.js";
 import {
     getCategorias,
     createCategoria,
     deleteCategoria,
-} from "../controllers/CategoriaController";
+} from "../controllers/CategoriaController.js";
 
 const router = Router();
 
