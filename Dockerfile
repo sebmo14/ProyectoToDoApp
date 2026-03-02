@@ -11,8 +11,12 @@ RUN npm install
 # Copiamos el resto del código
 COPY . .
 
-# Exponemos el puerto
+# Compilamos el proyecto (esto genera la carpeta dist/)
+RUN npm run build
+
+# Exponemos el puerto (por defecto 3000, pero se sobreescribe con el .env en desarrollo)
 EXPOSE 3000
 
-# Comando para correr la app con ts-node (útil si no quieres compilar en el build)
-CMD [ "npx", "ts-node", "src/index.ts" ]
+# Comando para correr la app con los archivos compilados
+# Usamos directamente 'node' sobre los archivos .js generados en 'dist/'
+CMD [ "node", "dist/index.js" ]
