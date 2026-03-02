@@ -4,12 +4,14 @@ import "dotenv/config";
 import routes from "./routes/index.js";
 
 const app = express();
-const port = process.env.PORT || 3000; 
+const port = process.env.PORT || 3000;
 
-app.use(cors()); 
+app.use(cors({
+  origin: "https://to-do-front-wheat.vercel.app"
+}));
 app.use(express.json());
 
-app.use("/api", routes); 
+app.use("/api", routes);
 
 app.listen(port, () => {
   console.log(` API backend corriendo en puerto ${port}`);
